@@ -294,5 +294,13 @@
     ],
     "password": "12345",
     "cookieId": "2460354"
+  },
+  {
+    "firstName": "Fara",
+    "lastName": "Ria",
+    "email": "fara@gmail.com",
+    "image": "user.png",
+    "currentBooks": [],
+    "password": "12345"
   }
 ]
