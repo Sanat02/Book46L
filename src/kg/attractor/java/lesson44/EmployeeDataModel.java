@@ -18,19 +18,14 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class EmployeeDataModel {
-    private List<Employee> employees = new ArrayList<>();
+    private final List<Employee> employees = new ArrayList<>();
 
     public EmployeeDataModel() {
-        employees = readFile();
+        employees.addAll(readFile());
     }
-
 
     public List<Employee> getEmployees() {
         return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
     }
 
     public void addEmployee(Employee employee) {
@@ -38,76 +33,46 @@ public class EmployeeDataModel {
         saveEmployeesToFile();
     }
 
-
-//    public int getEmployeeBookSize(Employee employee) {
-//        int size=0;
-//        for(int i=0;i<employees.size();i++)
-//        {
-//            if(employee.getEmail().equals(employees.get(i).getEmail()))
-//            {
-//               size=employees.get(i).getCurrentBooks().size();
-//            }
-//        }
-//       return size;
-//    }
-    public void setEmployeeCookieId(String email)
-    {
-        for(int i=0;i<employees.size();i++)
-        {
-            if(email.equals(employees.get(i).getEmail()))
-            {
-                employees.get(i).makeCookieId(email);
-            }
-        }
-
-        saveEmployeesToFile();
-    }
-    public void setEmployeeBooks(String email, BookDataModel.Book book)
-    {
-        List<BookDataModel.Book> bookList=new ArrayList<>();
-
-        for(int i=0;i<employees.size();i++)
-        {
-            if(email.equals(employees.get(i).getEmail()))
-            {
-                bookList=employees.get(i).getCurrentBooks();
-                bookList.add(book);
-                employees.get(i).setCurrentBooks(bookList);
-            }
-        }
-
-        saveEmployeesToFile();
-    }
-    public int getEmployeeBookSize(String email)
-    {
-        int size=0;
-        for(int i=0;i<employees.size();i++)
-        {
-            if(email.equals(employees.get(i).getEmail()))
-            {
-                size=employees.get(i).getCurrentBooks().size();
+    public void setEmployeeCookieId(String email) {
+        for (Employee employee : employees) {
+            if (email.equals(employee.getEmail())) {
+                employee.makeCookieId(email);
                 break;
             }
         }
-
         saveEmployeesToFile();
-        return size;
     }
-    public void getEmployeeCookieId(String email)
-    {
-        for(int i=0;i<employees.size();i++)
-        {
-            if(email.equals(employees.get(i).getEmail()))
-            {
-               System.out.println(employees.get(i).getCookieId());
-               break;
+
+    public void setEmployeeBooks(String email, BookDataModel.Book book) {
+        for (Employee employee : employees) {
+            if (email.equals(employee.getEmail())) {
+                employee.addBook(book);
+                break;
             }
         }
-
         saveEmployeesToFile();
     }
 
-    public void saveEmployeesToFile() {
+    public int getEmployeeBookSize(String email) {
+        for (Employee employee : employees) {
+            if (email.equals(employee.getEmail())) {
+                return employee.getCurrentBooks().size();
+            }
+        }
+        return 0;
+    }
+
+    public void getEmployeeCookieId(String email) {
+        for (Employee employee : employees) {
+            if (email.equals(employee.getEmail())) {
+                System.out.println(employee.getCookieId());
+                break;
+            }
+        }
+        saveEmployeesToFile();
+    }
+
+    private void saveEmployeesToFile() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String json = gson.toJson(employees);
         try (FileWriter writer = new FileWriter("employees.json")) {
@@ -118,44 +83,43 @@ public class EmployeeDataModel {
     }
 
     private List<Employee> readFile() {
-        List<Employee> emplist = new ArrayList<>();
+        List<Employee> employeeList = new ArrayList<>();
         try {
-            Type listType = new TypeToken<ArrayList<Employee>>() {
-            }.getType();
             Path path = Paths.get("employees.json");
             String json = Files.readString(path);
-            emplist = new Gson().fromJson(json, listType);
-
+            Type listType = new TypeToken<List<Employee>>() {}.getType();
+            employeeList = new Gson().fromJson(json, listType);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return emplist;
+        return employeeList;
     }
 
     public static class Employee {
-        private String firstName;
-        private String lastName;
-        private String password;
-        private String email;
+        private final String firstName;
+        private final String lastName;
+        private final String email;
         private String job;
         private String phone;
         private String image;
-        private List<BookDataModel.Book> currentBooks=new ArrayList<>();
+        private final List<BookDataModel.Book> currentBooks = new ArrayList<>();
         private List<String> takenBooks;
+        private String password;
         private String cookieId;
 
-
-        public Employee(String firstName, String lastName, String email, String job, String phone, String image, List<BookDataModel.Book> currentBooks, List<String> takenBooks, String password) {
+        public Employee(String firstName, String lastName, String email, String job, String phone, String image,
+                        List<BookDataModel.Book> currentBooks, List<String> takenBooks, String password) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
             this.job = job;
             this.phone = phone;
             this.image = image;
-            this.currentBooks = currentBooks;
+            this.currentBooks.addAll(currentBooks);
             this.takenBooks = takenBooks;
             this.password = password;
         }
+
         public void addBook(BookDataModel.Book book) {
             currentBooks.add(book);
         }
@@ -164,24 +128,12 @@ public class EmployeeDataModel {
             return firstName;
         }
 
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
-
         public String getLastName() {
             return lastName;
         }
 
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
-
         public String getEmail() {
             return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
         }
 
         public String getJob() {
@@ -212,11 +164,6 @@ public class EmployeeDataModel {
             return currentBooks;
         }
 
-
-        public void setCurrentBooks(List<BookDataModel.Book> currentBooks) {
-            this.currentBooks = currentBooks;
-        }
-
         public List<String> getTakenBooks() {
             return takenBooks;
         }
@@ -245,7 +192,7 @@ public class EmployeeDataModel {
             this.cookieId = makeCode(email);
         }
 
-        public String makeCode(String input) {
+        private String makeCode(String input) {
             try {
                 MessageDigest md = MessageDigest.getInstance("MD5");
                 return convertToString(md.digest(input.getBytes()));

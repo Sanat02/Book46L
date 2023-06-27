@@ -1,12 +1,9 @@
 package kg.attractor.java.lesson44;
 
 import com.sun.net.httpserver.HttpExchange;
-import freemarker.template.Configuration;
-import freemarker.template.TemplateExceptionHandler;
 import kg.attractor.java.server.ContentType;
 import kg.attractor.java.server.Cookie;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -21,12 +18,11 @@ public class Lesson46Server extends Lesson44Server {
     private final EmployeeDataModel employeeDataModel;
     EmployeeDataModel.Employee user = null;
 
-    private final Configuration freemarker;
 
     public Lesson46Server(String host, int port) throws IOException {
         super(host, port);
         employeeDataModel = new EmployeeDataModel();
-        freemarker = initFreeMarker();
+
         registerGet("/register", this::handleRegisterGet);
         registerPost("/register", this::handleRegisterPost);
         registerGet("/employee", this::freemarkerSampleHandler);
@@ -79,7 +75,7 @@ public class Lesson46Server extends Lesson44Server {
     private void handleLogOut(HttpExchange exchange) {
         redirect303(exchange, "/");
         user.setCookieId("0");
-        user=null;
+        user = null;
     }
 
 
@@ -119,21 +115,6 @@ public class Lesson46Server extends Lesson44Server {
     public void handleProfileGet(HttpExchange exchange) {
 
         renderTemplate(exchange, "profile.html", user);
-    }
-
-    private static Configuration initFreeMarker() {
-        try {
-            Configuration cfg = new Configuration(Configuration.VERSION_2_3_29);
-            cfg.setDirectoryForTemplateLoading(new File("data"));
-            cfg.setDefaultEncoding("UTF-8");
-            cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
-            cfg.setLogTemplateExceptions(false);
-            cfg.setWrapUncheckedExceptions(true);
-            cfg.setFallbackOnNullLoopVariable(false);
-            return cfg;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
 

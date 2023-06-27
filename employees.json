@@ -105,7 +105,6 @@
   {
     "firstName": "Sancho",
     "lastName": "Emil",
-    "password": "12345",
     "email": "sancho@gmail.com",
     "image": "jojo.png",
     "currentBooks": [
@@ -128,12 +127,12 @@
         "year": " "
       }
     ],
+    "password": "12345",
     "cookieId": "d345356"
   },
   {
     "firstName": "Sia",
     "lastName": "Nora",
-    "password": "12345",
     "email": "sia@gmail.com",
     "image": "user.png",
     "currentBooks": [
@@ -156,12 +155,12 @@
         "year": " "
       }
     ],
+    "password": "12345",
     "cookieId": "6ff219"
   },
   {
     "firstName": "Du",
     "lastName": "Di",
-    "password": "12345",
     "email": "du@gmail.com",
     "image": "user.png",
     "currentBooks": [
@@ -184,12 +183,12 @@
         "year": " "
       }
     ],
+    "password": "12345",
     "cookieId": "1f71f48"
   },
   {
     "firstName": "Dias",
     "lastName": "Bora",
-    "password": "12345",
     "email": "dias@gmail.com",
     "image": "user.png",
     "currentBooks": [
@@ -212,31 +211,88 @@
         "year": " "
       }
     ],
+    "password": "12345",
     "cookieId": "0"
   },
   {
     "firstName": "Fiona",
     "lastName": "Ogr",
-    "password": "12345",
     "email": "fiona@gmail.com",
     "image": "user.png",
-    "currentBooks": []
+    "currentBooks": [],
+    "password": "12345"
   },
   {
     "firstName": "Shrek",
     "lastName": "Ogr",
-    "password": "12345",
     "email": "shrek@gmail.com",
     "image": "user.png",
     "currentBooks": [],
+    "password": "12345",
     "cookieId": "243f7e"
   },
   {
     "firstName": "Di",
     "lastName": "Do",
-    "password": "12345",
     "email": "dog@gmail.com",
     "image": "user.png",
-    "currentBooks": []
+    "currentBooks": [],
+    "password": "12345"
+  },
+  {
+    "firstName": "Salman",
+    "lastName": "Khan",
+    "email": "salman@gmail.com",
+    "image": "user.png",
+    "currentBooks": [
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      },
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      }
+    ],
+    "password": "12345",
+    "cookieId": "723606a"
+  },
+  {
+    "firstName": "Sara",
+    "lastName": "Bo",
+    "email": "sara@gmail.com",
+    "image": "user.png",
+    "currentBooks": [
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      },
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      }
+    ],
+    "password": "12345",
+    "cookieId": "2460354"
   }
 ]
