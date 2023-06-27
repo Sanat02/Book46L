@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+ :root{
+   --main-color:#885b9e;
+   --primary-color: #11d388;
+   --black:#141414;
+   --white:#fff;
+   --bg: #f2f2f2;
+   --light-black:#666;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  outline: none; border: none;
+  text-decoration: none;
+  transition: .2s linear;
+  text-transform: capitalize;
+}
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--primary-color);
+}
+
+section{
+  padding: 3rem 9%;
+}
+
+.heading{
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+ 
+
+/* book */
+
+.book{
+
+  background: var(--bg);
+  text-align: center;
+  position: relative;
+  background-color:  #11d388;
+
+}
+
+.book .content{
+  display: flex;
+}
+.info{
+  font-size: larger;
+}
+.infos{
+  margin-top: 30px;
+  font-size: 180%;
+}
+
+.book .content .left{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+
+.book .content .left .box1{
+  padding: 6rem 1% 0;
+}
+
+.book .content .left .box1 img,
+.book .content .left .box2 img{
+  width: 100%;
+  height: 100%;
+}
+
+.book .content .left .box1 .no-line,
+.book .content .left .box2 .no-line{
+  margin: 0 auto 2rem;
+}
+
+.book .content .left .box1 .context{
+  background: red;
+  box-shadow: 0 0 1rem .3rem rgba(0, 0, 0, 0.05);
+  padding: 4rem 0 2.5rem;
+  border-radius: 3rem;
+}
+
+.book .content .left .box2{
+  padding: 0 1%;
+}
+
+.book .content .left .box2 .context{
+  background-color:red;
+  box-shadow: 0 0 1rem .3rem rgba(0, 0, 0, 0.05);
+  padding: 7rem 0 5.5rem;
+  border-radius: 3rem;
+} 
+
+.book .content .left .box1 .context i,
+.book .content .left .box2 .context i{
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin: .5rem 0 1.5rem 0;
+}
+
+.book .content .left .box1 .context h3,
+.book .content .left .box2 .context h3{
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.book .content .right{
+  padding: 10% 9% 0;
+  text-align: left;
+}
+
+.book .content .right h4{
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 500;
+  text-transform: uppercase;
+  background: url(../images/bgwhite.png) no-repeat;
+  display: inline-block;
+  padding: .8rem 0 .8rem 2rem;
+  margin-left: -2rem;
+}
+
+.book .content .right h2{
+  font-size: 4rem;
+  color: var(--black);
+  padding-top: 1rem;
+}
+
+.book .content .right p{
+  font-size: 1.2rem;
+  color: var(--black);
+  padding: 1rem 0;
+  padding-bottom: 3rem;
+  line-height: 2;
+}
+.heading
+{
+  color: white;
+  margin-top:120px;
+}
+/* end */
+header nav{
+    background-color: #089da1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #089da1;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    margin-bottom:5px;
+}
+
+header nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+.context2{
+color:white;
+font-size:50px;
+}
+.status{
+padding-left:4px;
+padding-right:4px;
+padding-top:2px;
+padding-bottom:2px;
+background-color:red;
+color:white;
+display:inline-block;
+margin-left:5px;
+border-radius:4px;
+font-size:17px;
+
+}
+
+
+

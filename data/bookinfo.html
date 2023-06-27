@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Info</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css link-->
+    <link rel="stylesheet" href="css/info.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+
+        </nav>
+   
+</header>
+    <!-- book -->
+    <section class="book" id="book">
+
+        <h1 class="heading">about the book</h1>
+
+        <div class="content">
+            <div class="left">
+                <div class="box1">
+                    <div class="box">
+                        <img src="${book.image}" alt="">
+                    </div>
+                    <div class="no-line"></div>
+                </div>
+
+            <div class="right">
+                <h4>the book</h4>
+            
+                <h2>${book.name}</h2>
+                <div class="infos">
+                <div class="info">Author:${book.author}</div>
+                <div class="info">Release date:${book.year}</div>
+                <div class="info">Genre:${book.genre}</div>
+                    <div class="info">status:<div class="status">${book.state}</div></div>
+
+            </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, iste dolore aut provident modi ducimus inventore dignissimos. Quos ipsa vel, tempora dolores soluta ea modi qui ad nostrum doloribus laudantium.</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- custom js link -->
+    <script src="js/script.js"></script>
+</body>
+</html>

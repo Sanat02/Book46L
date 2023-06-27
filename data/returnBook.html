@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book List</title>
+  <link rel="stylesheet" type="text/css" href="">
+  <style>table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .not-available-button {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .icon {
+    margin-left: 5px;
+  }
+  .available-button{
+   color: white;
+    background-color: green;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+  <h1>Book List</h1>
+  
+  <table>
+    <tr>
+      <th>Book Name</th>
+      <th>Book Author</th>
+      <th>Book Genre</th>
+      <th></th>
+    </tr>
+
+    <#if email??><div> <h1>User ${email} bookList</h1></div>
+
+    <#list currentBooks as currentBook>
+
+    <tr>
+      <td>${ currentBook.name}</td>
+      <td>${ currentBook.author}</td>
+      <td>${ currentBook.genre}</td>
+
+      <td>
+        <button class="available-button">
+          RETURN
+        </button>
+      </td>
+    </tr>
+</#list>
+
+    <#else>NO USER</#if>
+
+
+  </table>
+</body>
+</html>

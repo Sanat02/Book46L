@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- custom css link-->
+    <link rel="stylesheet" href="css/book.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="comp"><i class="fas fa-building"></i></div>
+            <div class="menu">
+                <div >
+                    <a href="http://localhost:8187/employee" class="booklink">
+                        <i class="fas fa-book"></i>
+                        Employees
+                    </a>
+                </div>
+                <div class="klo">
+                    <i class="fas fa-book"></i>
+                    Books
+                </div>
+            </div>
+        </div>
+    
+        <div class="navbar2">
+        
+        </div>
+    </header>
+
+<main>
+    <div class="maincontent">
+    
+        <div class="grid-container">
+            <#list books as book>
+            <div class="grid-item">
+                <div class="profile"><img class="imgprofile" src="${book.image}"></div>
+                <div class="name">${book.name}</div>
+                <#if book.state=="vacant">
+                <div class="green">Book taker:${book.bookTaker}</div>
+                <button class="button"><i class="fas fa-check checkmark-icon"></i> ${book.state}
+                </button>
+                <#else>
+                <div class="red">Book taker:${book.bookTaker}</div>
+                <button class="button2">
+                    <i class="fas fa-times close-icon"></i> ${book.state}
+                </button>
+                </#if>
+                <div class="link"><a href="http://localhost:8187/bookinfo" class="arrivals_btn">Learn More</a></div>
+            </div>
+            </#list>
+        </div>
+
+    </div>
+</main>
+<footer>
+    <p><i class="fas fa-building"></i> Company Name</p>
+    <p><i class="fas fa-map-marker-alt"></i> Address, City, Country</p>
+    <p><i class="fas fa-phone"></i> Phone: 123-456-7890</p>
+    <p><i class="fas fa-envelope"></i> Email: info@example.com</p>
+</footer>
+
+
+    
+    
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
