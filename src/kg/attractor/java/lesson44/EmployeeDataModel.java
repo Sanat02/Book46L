@@ -62,7 +62,7 @@ public class EmployeeDataModel {
 
         saveEmployeesToFile();
     }
-    public void setEmployeeImageId(String email, BookDataModel.Book book)
+    public void setEmployeeBooks(String email, BookDataModel.Book book)
     {
         List<BookDataModel.Book> bookList=new ArrayList<>();
 
@@ -78,7 +78,7 @@ public class EmployeeDataModel {
 
         saveEmployeesToFile();
     }
-    public int getEmployeeImageId(String email)
+    public int getEmployeeBookSize(String email)
     {
         int size=0;
         for(int i=0;i<employees.size();i++)

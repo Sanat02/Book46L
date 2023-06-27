@@ -41,10 +41,7 @@ public class Lesson46Server extends Lesson44Server {
     }
 
     private void handleReturnBook(HttpExchange exchange) {
-
-            renderTemplate(exchange, "returnBook.html", user);
-
-
+        renderTemplate(exchange, "returnBook.html", user);
     }
 
     private void freemarkerSampleHandler(HttpExchange exchange) {
@@ -64,14 +61,14 @@ public class Lesson46Server extends Lesson44Server {
 
     private void handleAddBook(HttpExchange exchange) {
         BookDataModel.Book book = new BookDataModel.Book("Any", "classic", "unknown", " ", "given", " ", " ");
-        int size = employeeDataModel.getEmployeeImageId(user.getEmail());
+        int size = employeeDataModel.getEmployeeBookSize(user.getEmail());
 
 
         System.out.println("size:" + size);
 
         if (size < 2) {
             renderTemplate(exchange, "addBook.html", user);
-            employeeDataModel.setEmployeeImageId(user.getEmail(), book);
+            employeeDataModel.setEmployeeBooks(user.getEmail(), book);
         } else {
             Path path = makeFilePath("bookLimit.html");
             sendFile(exchange, path, ContentType.TEXT_HTML);
@@ -111,8 +108,7 @@ public class Lesson46Server extends Lesson44Server {
             employeeDataModel.getEmployeeCookieId(parsed.get("email"));
             Cookie sessionCookieId = Cookie.make("cookieId", user.getCookieId());
             exchange.getResponseHeaders().add("Set-Cookie", sessionCookieId.toString());
-
-
+            sessionCookieId.setMaxAge(3600);
         } else {
             Path path = makeFilePath("loginError.html");
             sendFile(exchange, path, ContentType.TEXT_HTML);
@@ -143,32 +139,31 @@ public class Lesson46Server extends Lesson44Server {
 
 
     private void cookieHandler(HttpExchange exchange) {
-        if(user!=null){
-        Map<String, Object> data = new HashMap<>();
-        String name = "times";
+        if (user != null) {
+            Map<String, Object> data = new HashMap<>();
+            String name = "times";
 
-        String cookieString = getCookies(exchange);
-        Map<String, String> cookies = Cookie.parse(cookieString);
+            String cookieString = getCookies(exchange);
+            Map<String, String> cookies = Cookie.parse(cookieString);
 
-        String cookieValue = cookies.getOrDefault(name, "0");
+            String cookieValue = cookies.getOrDefault(name, "0");
 
-        int times = Integer.parseInt(cookieValue) + 1;
+            int times = Integer.parseInt(cookieValue) + 1;
 
-        Cookie response = new Cookie<>(name, times);
-        setCookie(exchange, response);
+            Cookie response = new Cookie<>(name, times);
+            setCookie(exchange, response);
 
-        data.put(name, times);
-        data.put("cookies", cookies);
-        Cookie c1 = Cookie.make("userId", user.getCookieId());
-        setCookie(exchange, c1);
-        renderTemplate(exchange, "cookie.html", data);}else
-        {
+            data.put(name, times);
+            data.put("cookies", cookies);
+            Cookie c1 = Cookie.make("userId", user.getCookieId());
+            setCookie(exchange, c1);
+            renderTemplate(exchange, "cookie.html", data);
+        } else {
             Path path = makeFilePath("cookieNull.html");
             sendFile(exchange, path, ContentType.TEXT_HTML);
 
         }
     }
-
 
 
     private void handleRegisterGet(HttpExchange exchange) {

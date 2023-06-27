@@ -128,7 +128,7 @@
         "year": " "
       }
     ],
-    "cookieId": "d345356"
+    "cookieId": "0"
   },
   {
     "firstName": "Sia",
@@ -192,7 +192,26 @@
     "password": "12345",
     "email": "dias@gmail.com",
     "image": "user.png",
-    "currentBooks": [],
-    "cookieId": "0"
+    "currentBooks": [
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      },
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      }
+    ],
+    "cookieId": "5f1a3211"
   }
 ]
