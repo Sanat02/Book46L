@@ -212,6 +212,30 @@
         "year": " "
       }
     ],
-    "cookieId": "5f1a3211"
+    "cookieId": "0"
+  },
+  {
+    "firstName": "Fiona",
+    "lastName": "Ogr",
+    "password": "12345",
+    "email": "fiona@gmail.com",
+    "image": "user.png",
+    "currentBooks": []
+  },
+  {
+    "firstName": "Shrek",
+    "lastName": "Ogr",
+    "password": "12345",
+    "email": "shrek@gmail.com",
+    "image": "user.png",
+    "currentBooks": []
+  },
+  {
+    "firstName": "Di",
+    "lastName": "Do",
+    "password": "12345",
+    "email": "dog@gmail.com",
+    "image": "user.png",
+    "currentBooks": []
   }
 ]

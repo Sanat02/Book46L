@@ -46,6 +46,10 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  .text{
+  text-decoration:none;
+  color:white;
+  }
   </style>
 </head>
 <body>
@@ -68,8 +72,7 @@
       <td>
         <#if user?has_content>
         <button class="available-button">
-        Available
-        <span class="icon"><a href="/book/get/bookname">+</a></span>
+          <a class="text" href="/book/get/bookname"> Available +</a>
       </button><#else>
         <button class="not-available-button">
         Not Available
