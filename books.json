@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Alice in Wonderland",
+    "genre": "fairy-tayle",
+    "author": "unknown",
+    "image": "images/alice.jpg",
+    "state": "vacant",
+    "bookTaker": "Angelina Jolie",
+    "year": "1865"
+  },
+  {
+    "name": "The Giver",
+    "genre": "fairy-tayle",
+    "author": "unknown",
+    "image": "images/giver.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "The Great Gatsby",
+    "genre": "fairy-tayle",
+    "author": "Scott Fitzgerald",
+    "image": "images/gatsby.jpg",
+    "state": "given",
+    "bookTaker": "Harry Potter",
+    "year": "1865"
+  },
+  {
+    "name": "The Hobbit",
+    "genre": "fairy-tayle",
+    "author": "R.Tolkien",
+    "image": "images/hobbit.jpg",
+    "state": "given",
+    "bookTaker": "Princess Tiana",
+    "year": "1865"
+  },
+  {
+    "name": "Jane Eyre",
+    "genre": "fairy-tayle",
+    "author": "Charlotte bronte",
+    "image": "images/jane.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Dune",
+    "genre": "fairy-tayle",
+    "author": "Frank Herbert",
+    "image": "images/dune.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Frankentstein",
+    "genre": "fairy-tayle",
+    "author": "Marry Shelly",
+    "image": "images/frankenstein.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Game of Thrones",
+    "genre": "fairy-tayle",
+    "author": "George Martin",
+    "image": "images/got.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "The diary of a Young Girl",
+    "genre": "fairy-tayle",
+    "author": "Ann Frank",
+    "image": "images/annefrank.jpg",
+    "state": "given",
+    "bookTaker": "Alan Rickman",
+    "year": "1865"
+  },
+  {
+    "name": "Don Quixote",
+    "genre": "fairy-tayle",
+    "author": "Miguel de Cervantes",
+    "image": "images/donk.jpg",
+    "state": "given",
+    "bookTaker": "Prince Harry",
+    "year": "1865"
+  },
+  {
+    "name": "Coraline",
+    "genre": "Horror,Dark fantasy",
+    "author": "Neil Geiman",
+    "image": "images/book_4.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Don Quixote",
+    "genre": "fairy-tayle",
+    "author": "Miguel de Cervantes",
+    "image": "images/book_3.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Hunger Games",
+    "genre": "fairy-tayle",
+    "author": "Suzanne Collins",
+    "image": "images/book_5.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Game of Thrones",
+    "genre": "fairy-tayle",
+    "author": "George Martin",
+    "image": "images/book_6.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Snow White",
+    "genre": "fairy-tayle",
+    "author": "Ann Frank",
+    "image": "images/arrival_2.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "10 Indians",
+    "genre": "fairy-tayle",
+    "author": "Miguel de Cervantes",
+    "image": "images/arrival_3.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Little Women",
+    "genre": "fairy-tayle",
+    "author": "Miguel de Cervantes",
+    "image": "images/arrival_4.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Hunger Games",
+    "genre": "fairy-tayle",
+    "author": "Suzanne Collins",
+    "image": "images/arrival_5.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Game of Thrones",
+    "genre": "fairy-tayle",
+    "author": "George Martin",
+    "image": "images/arrival_6.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Snow White",
+    "genre": "fairy-tayle",
+    "author": "Ann Frank",
+    "image": "images/arrival_7.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "10 Indians",
+    "genre": "fairy-tayle",
+    "author": "Miguel de Cervantes",
+    "image": "images/arrival_9.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  },
+  {
+    "name": "Little Women",
+    "genre": "fairy-tayle",
+    "author": "Miguel de Cervantes",
+    "image": "images/arrival_3.jpg",
+    "state": "vacant",
+    "bookTaker": "none",
+    "year": "1865"
+  }
+]

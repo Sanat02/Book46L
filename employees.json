@@ -1,0 +1,189 @@
+[
+  {
+    "firstName": "Angelina",
+    "lastName": "Jolie",
+    "email": "angelina.@gmail.com",
+    "job": "Ceo",
+    "phone": "0779137552",
+    "image": "images/e10.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Prince",
+    "lastName": "Charming",
+    "email": "charming.@gmail.com",
+    "job": "Developer",
+    "phone": "0775537572",
+    "image": "images/e2.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Emilia",
+    "lastName": "Clarke",
+    "email": "emy.@gmail.com",
+    "job": "Hr-manager",
+    "phone": "0559137572",
+    "image": "images/e3.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "email": "potter.@gmail.com",
+    "job": "Developer",
+    "phone": "0779137572",
+    "image": "images/e4.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Princess",
+    "lastName": "Tiana",
+    "email": "prtiana.@gmail.com",
+    "job": "Team-lead",
+    "phone": "0788137572",
+    "image": "images/e6.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Vin",
+    "lastName": "Diesel",
+    "email": "dizel.@gmail.com",
+    "job": "Hr-manager",
+    "phone": "0776667572",
+    "image": "images/e7.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Alan",
+    "lastName": "Rickman",
+    "email": "rick@gmail.com",
+    "job": "Director",
+    "phone": "0777137572",
+    "image": "images/e8.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Prince",
+    "lastName": "Harry",
+    "email": "harryroyal.@gmail.com",
+    "phone": "0733337572",
+    "image": "images/e9.jpg",
+    "currentBooks": [],
+    "takenBooks": [
+      "Hobbit",
+      "The Snow white"
+    ]
+  },
+  {
+    "firstName": "Sancho",
+    "lastName": "Emil",
+    "password": "12345",
+    "email": "sancho@gmail.com",
+    "image": "jojo.png",
+    "currentBooks": [
+      {
+        "name": "Some",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      },
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      }
+    ],
+    "cookieId": "d345356"
+  },
+  {
+    "firstName": "Sia",
+    "lastName": "Nora",
+    "password": "12345",
+    "email": "sia@gmail.com",
+    "image": "user.png",
+    "currentBooks": [
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      },
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      }
+    ],
+    "cookieId": "6ff219"
+  },
+  {
+    "firstName": "Du",
+    "lastName": "Di",
+    "password": "12345",
+    "email": "du@gmail.com",
+    "image": "user.png",
+    "currentBooks": [
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      },
+      {
+        "name": "Any",
+        "genre": "classic",
+        "author": "unknown",
+        "image": " ",
+        "state": "given",
+        "bookTaker": " ",
+        "year": " "
+      }
+    ],
+    "cookieId": "1f71f48"
+  }
+]
