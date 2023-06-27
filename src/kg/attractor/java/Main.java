@@ -1,7 +1,4 @@
 package kg.attractor.java;
-
-import kg.attractor.java.lesson44.Lesson44Server;
-import kg.attractor.java.lesson44.Lesson45Server;
 import kg.attractor.java.lesson44.Lesson46Server;
 
 

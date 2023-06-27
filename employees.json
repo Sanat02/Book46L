@@ -185,5 +185,14 @@
       }
     ],
     "cookieId": "1f71f48"
+  },
+  {
+    "firstName": "Dias",
+    "lastName": "Bora",
+    "password": "12345",
+    "email": "dias@gmail.com",
+    "image": "user.png",
+    "currentBooks": [],
+    "cookieId": "0"
   }
 ]

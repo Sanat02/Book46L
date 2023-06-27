@@ -143,6 +143,7 @@ public class Lesson46Server extends Lesson44Server {
 
 
     private void cookieHandler(HttpExchange exchange) {
+        if(user!=null){
         Map<String, Object> data = new HashMap<>();
         String name = "times";
 
@@ -156,24 +157,19 @@ public class Lesson46Server extends Lesson44Server {
         Cookie response = new Cookie<>(name, times);
         setCookie(exchange, response);
 
-
         data.put(name, times);
         data.put("cookies", cookies);
         Cookie c1 = Cookie.make("userId", user.getCookieId());
         setCookie(exchange, c1);
-        renderTemplate(exchange, "cookie.html", data);
-    }
+        renderTemplate(exchange, "cookie.html", data);}else
+        {
+            Path path = makeFilePath("cookieNull.html");
+            sendFile(exchange, path, ContentType.TEXT_HTML);
 
-    protected void redirect303(HttpExchange exchange, String path) {
-        try {
-            exchange.getResponseHeaders().add("Location", path);
-            exchange.sendResponseHeaders(303, 0);
-            exchange.getResponseBody().close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
+
+
 
     private void handleRegisterGet(HttpExchange exchange) {
         renderTemplate(exchange, "register.html", employeeDataModel);
