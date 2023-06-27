@@ -128,7 +128,7 @@
         "year": " "
       }
     ],
-    "cookieId": "0"
+    "cookieId": "d345356"
   },
   {
     "firstName": "Sia",
@@ -228,7 +228,8 @@
     "password": "12345",
     "email": "shrek@gmail.com",
     "image": "user.png",
-    "currentBooks": []
+    "currentBooks": [],
+    "cookieId": "243f7e"
   },
   {
     "firstName": "Di",

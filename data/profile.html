@@ -12,22 +12,25 @@
 </head>
 <body>
 <header>
+
     <div class="navbar">
         <div class="comp"><i class="fas fa-building"></i></div>
         <div class="menu">
             <div>
                 <i class="fas fa-users"></i>
-                Employees
+                <a href="/employee" class="booklink">
+                    Employees
+                </a>
             </div>
-            <div>
-                <a href="http://localhost:8187/book" class="booklink">
+            <div class="book-menu">
+                <a href="/book" class="booklink">
                     <i class="fas fa-book"></i>
                     Books
                 </a>
                 <ul class="sub-menu">
-                <li><a href="/book/get">Get Book</a></li>
-                <li><a href="#">Return Book</a></li>
-               </ul>
+                    <li><a class="l" href="/book/get">Get Book</a></li>
+                    <li><a class="l" href="/book/return">Return Book</a></li>
+                </ul>
             </div>
             <div class="klo">
                 <i class="fas fa-user"></i>
@@ -35,6 +38,8 @@
             </div>
         </div>
     </div>
+
+
 </header>
 
 <#if email?has_content>

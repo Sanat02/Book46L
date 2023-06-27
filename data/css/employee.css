@@ -182,4 +182,44 @@ footer p {
 footer i {
   margin-right: 5px;
 }
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.book-menu {
+  position: relative;
+}
+
+.sub-menu {
+  margin-top:5px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #11d388;
+  padding-top:6px;
+  padding-bottom:6px;
+  padding-left:3px;
+   padding-right:3px;
+}
+
+.book-menu:hover .sub-menu {
+  display: block;
+}
+.l{
+font-size:15px;
+color:white;
+margin-bottom:5px;
+text-decoration:none;
+}
+
+
 

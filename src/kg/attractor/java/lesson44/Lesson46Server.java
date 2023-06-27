@@ -79,8 +79,7 @@ public class Lesson46Server extends Lesson44Server {
     private void handleLogOut(HttpExchange exchange) {
         redirect303(exchange, "/");
         user.setCookieId("0");
-
-
+        user=null;
     }
 
 

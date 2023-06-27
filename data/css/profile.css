@@ -207,20 +207,30 @@ strong {
   z-index: 1;
 }
 
-.submenu a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  padding: 5px;
-}
-
-.submenu a:hover {
-  background-color: #ddd;
-}
-.booklink {
+.book-menu {
   position: relative;
-  display: inline-block;
 }
 
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #11d388;
+  padding-top:6px;
+  padding-bottom:6px;
+  padding-left:3px;
+   padding-right:3px;
+}
 
+.book-menu:hover .sub-menu {
+  display: block;
+}
+.l{
+font-size:15px;
+color:white;
+margin-bottom:5px;
+text-decoration:none;
+}
 
